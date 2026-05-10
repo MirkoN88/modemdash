@@ -1,0 +1,31 @@
+<%+header%>
+
+<h2>Modem 5G Dashboard (modemdash)</h2>
+
+<div class="cbi-section">
+    <div class="cbi-section-node">
+        <h3>Valori istantanei</h3>
+        <p><b>Tech:</b> <span id="tech"></span></p>
+        <p><b>RSRP:</b> <span id="rsrp"></span></p>
+        <p><b>RSRQ:</b> <span id="rsrq"></span></p>
+        <p><b>SINR:</b> <span id="sinr"></span></p>
+        <p><b>PCI:</b> <span id="pci"></span></p>
+        <p><b>Banda:</b> <span id="band"></span></p>
+        <p><b>EARFCN:</b> <span id="earfcn"></span></p>
+        <p><b>Cell ID (hex):</b> <span id="cellid"></span></p>
+        <p><b>TAC:</b> <span id="tac"></span></p>
+        <p><b>CA (celle secondarie):</b> <span id="ca_count"></span></p>
+    </div>
+
+    <div class="cbi-section-node">
+        <h3>Grafici live</h3>
+        <canvas id="chart_rsrp" height="80"></canvas>
+        <canvas id="chart_rsrq" height="80"></canvas>
+        <canvas id="chart_sinr" height="80"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/luci-static/resources/modemdash/modemdash.js"></script>
+
+<%+footer%>
